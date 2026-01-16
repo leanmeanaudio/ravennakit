@@ -227,13 +227,17 @@ inline std::ostream& operator<<(std::ostream& os, const PathMatcher::Error err) 
     return os;
 }
 
+}  // namespace rav
+
+// Make PathMatcher::Error printable with fmt (must be defined before any fmt::format usage)
+template<>
+struct fmt::formatter<rav::PathMatcher::Error>: fmt::ostream_formatter {};
+
+namespace rav {
+
 // Make PathMatcher::Error compatible with boost::system::result
 BOOST_NORETURN BOOST_NOINLINE inline void throw_exception_from_error(PathMatcher::Error const& e, boost::source_location const& loc) {
     boost::throw_with_location(std::runtime_error(fmt::format("PathMatcher::Error: {}", e)), loc);
 }
 
 }  // namespace rav
-
-// Make PathMatcher::Error printable with fmt
-template<>
-struct fmt::formatter<rav::PathMatcher::Error>: ostream_formatter {};
