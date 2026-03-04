@@ -7,10 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
-### Changed
+### Added
 
-- Made the max number of senders and receivers configurable through compile definitions RAV_MAX_NUM_WRITERS and
-  RAV_MAX_NUM_READERS
+- Added compile options to configure the max number of senders and receivers (RAV_MAX_NUM_WRITERS and
+  RAV_MAX_NUM_READERS).
 
 ## [v0.21.4] - February 4, 2026
 
