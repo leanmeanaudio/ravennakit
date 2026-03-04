@@ -42,11 +42,15 @@
 #include <boost/container/static_vector.hpp>
 #include <boost/lockfree/spsc_value.hpp>
 
+#ifndef RAV_MAX_NUM_READERS
+    #define RAV_MAX_NUM_READERS 16
+#endif
+
 namespace rav::rtp {
 
 struct AudioReceiver {
     /// The maximum number of readers.
-    static constexpr auto k_max_num_readers = 16;
+    static constexpr auto k_max_num_readers = RAV_MAX_NUM_READERS;
 
     /// The maximum number of redundant sessions per reader (redundant paths).
     static constexpr auto k_max_num_redundant_sessions = 2;  // How many redundant paths

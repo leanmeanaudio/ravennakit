@@ -32,6 +32,8 @@ These are options which are to influence the CMake configuration and are also de
 | RAV_LOG_ON_ASSERT=0/1             | When enabled, RAV_ASSERT (and friends) will log a message when the assertion fails.                                |
 | RAV_THROW_EXCEPTION_ON_ASSERT=0/1 | When enabled, RAV_ASSERT (and friends) will throw an exception when the assertion fails.                           |
 | RAV_ABORT_ON_ASSERT=0/1           | When enabled, RAV_ASSERT (and friends) will call std::abort() when the assertion fails. Very useful for debugging. |
+| RAV_MAX_NUM_WRITERS=N             | Maximum number of writers for AudioSender. Default: 16.                                                            |
+| RAV_MAX_NUM_READERS=N             | Maximum number of readers for AudioReceiver. Default: 16.                                                          |
 
 ## Environment variables
 

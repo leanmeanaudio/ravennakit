@@ -36,6 +36,10 @@
 
 #include <boost/container/static_vector.hpp>
 
+#ifndef RAV_MAX_NUM_WRITERS
+    #define RAV_MAX_NUM_WRITERS 16
+#endif
+
 namespace rav::rtp {
 
 struct AudioSender {
@@ -51,7 +55,7 @@ struct AudioSender {
     static constexpr auto k_supported_encodings = {AudioEncoding::pcm_s16, AudioEncoding::pcm_s24};
 
     /// The maximum number of writers.
-    static constexpr auto k_max_num_writers = 16;
+    static constexpr auto k_max_num_writers = RAV_MAX_NUM_WRITERS;
 
     /// The maximum number of redundant sessions per stream.
     static constexpr auto k_max_num_redundant_sessions = 2;  // How many redundant paths

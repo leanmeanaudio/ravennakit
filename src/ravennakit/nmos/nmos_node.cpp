@@ -411,7 +411,8 @@ rav::nmos::Node::Node(
         "/x-nmos/node/{version}/self",
         [this](const HttpServer::Request&, HttpServer::Response& res, const PathMatcher::Parameters& params) {
             if (!get_valid_api_version_from_parameters(params, k_node_api_versions).has_value()) {
-                return invalid_api_version_response(res);
+                invalid_api_version_response(res);
+                return;
             }
 
             ok_response(res, boost::json::serialize(boost::json::value_from(self_)));

@@ -89,35 +89,35 @@ inline std::atomic log_level = LogLevel::info;
     #endif
 
     #ifndef RAV_LOG_DEBUG
-        #define RAV_LOG_DEBUG(...)                         \
+        #define RAV_LOG_DEBUG(...)                     \
             if (log_level.load() >= LogLevel::debug) { \
                 fmt::println("[D] " __VA_ARGS__);      \
             }
     #endif
 
     #ifndef RAV_LOG_CRITICAL
-        #define RAV_LOG_CRITICAL(...)                         \
+        #define RAV_LOG_CRITICAL(...)                     \
             if (log_level.load() >= LogLevel::critical) { \
                 fmt::println("[C] " __VA_ARGS__);         \
             }
     #endif
 
     #ifndef RAV_LOG_ERROR
-        #define RAV_LOG_ERROR(...)                         \
+        #define RAV_LOG_ERROR(...)                     \
             if (log_level.load() >= LogLevel::error) { \
                 fmt::println("[E] " __VA_ARGS__);      \
             }
     #endif
 
     #ifndef RAV_LOG_WARNING
-        #define RAV_LOG_WARNING(...)                         \
+        #define RAV_LOG_WARNING(...)                     \
             if (log_level.load() >= LogLevel::warning) { \
                 fmt::println("[W] " __VA_ARGS__);        \
             }
     #endif
 
     #ifndef RAV_LOG_INFO
-        #define RAV_LOG_INFO(...)                         \
+        #define RAV_LOG_INFO(...)                     \
             if (log_level.load() >= LogLevel::info) { \
                 fmt::println("[I] " __VA_ARGS__);     \
             }
@@ -132,14 +132,14 @@ inline std::atomic log_level = LogLevel::info;
 
 #endif
 
-#define CATCH_LOG_UNCAUGHT_EXCEPTIONS                                                                                     \
-    catch (const rav::Exception& e) {                                                                                     \
+#define CATCH_LOG_UNCAUGHT_EXCEPTIONS                                                                                         \
+    catch (const rav::Exception& e) {                                                                                         \
         RAV_LOG_CRITICAL("rav::Exception caught: {} - please handle your exceptions before reaching this point.", e.what());  \
-    }                                                                                                                     \
-    catch (const std::exception& e) {                                                                                     \
+    }                                                                                                                         \
+    catch (const std::exception& e) {                                                                                         \
         RAV_LOG_CRITICAL("std::exception caucght: {} - please handle your exceptions before reaching this point.", e.what()); \
-    }                                                                                                                     \
-    catch (...) {                                                                                                         \
+    }                                                                                                                         \
+    catch (...) {                                                                                                             \
         RAV_LOG_CRITICAL("unknown exception caucght - please handle your exceptions before reaching this point.");            \
     }
 
