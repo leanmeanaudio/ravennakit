@@ -12,7 +12,7 @@ desktop applications and cloud deployments.
 
 A full JUCE base example app is available to evaluate RAVENNAKIT and to learn how RAVENNAKIT can be integrated. The source code is available as well as pre-built binaries and installers.
 
-<a href="https://ravennakit.com/" target="_blank">
+<a href="https://github.com/soundondigital/ravennakit_juce_demo" target="_blank">
   <img alt="RAVENNAKIT Demo receivers" src="https://ravennakit.com/assets/ravennakit_demo_receivers.png" width="600">
 </a>
 
