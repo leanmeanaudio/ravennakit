@@ -8,6 +8,16 @@ desktop applications and cloud deployments.
 
 [Skip to Getting started](#getting-started)
 
+## Demo application
+
+A full JUCE base example app is available to evaluate RAVENNAKIT and to learn how RAVENNAKIT can be integrated. The source code is available as well as pre-built binaries and installers.
+
+<a href="https://ravennakit.com/" target="_blank">
+  <img alt="RAVENNAKIT Demo receivers" src="https://ravennakit.com/assets/ravennakit_demo_receivers.png" width="600">
+</a>
+
+https://github.com/soundondigital/ravennakit_juce_demo
+
 ## What's Included
 
 ### RAVENNA / AES67 / ST2110-30 
@@ -36,11 +46,6 @@ Session Description Protocol (SDP) parsing and generation to support signaling b
 ### Core Utilities
 A rich set of utilities for audio buffers, audio formats, generic containers, streams, lock-free programming, integer
 wraparound, URIs, and more to support all of the above ([ravennakit/core](include/ravennakit/core)).
-
-## Demo application
-
-A full JUCE base example app can be found [here](https://github.com/soundondigital/ravennakit_juce_demo). The source
-code is available as well as pre-built binaries and installers.
 
 ## Commercial Support & Licensing
 
