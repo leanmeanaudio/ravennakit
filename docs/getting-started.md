@@ -132,4 +132,5 @@ int main([[maybe_unused]] int const argc, [[maybe_unused]] char* argv[]) {
 }
 ``` 
 
-For more detailed examples on how to set up a RAVENNA node, see [examples/](../examples).
+There are examples which show how RAVENNAKIT can be used:  
+https://github.com/soundondigital/ravennakit/tree/main/examples
