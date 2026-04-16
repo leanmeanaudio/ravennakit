@@ -26,6 +26,7 @@
 
 #include "ravennakit/core/platform.hpp"
 #include "ravennakit/core/exception.hpp"
+#include "../dnssd_config.hpp"
 
 #if RAV_APPLE
     #define RAV_HAS_APPLE_DNSSD 1
@@ -48,12 +49,12 @@
     #include <dns_sd.h>
 
     #define DNSSD_THROW_IF_ERROR(result, msg)                                                                                      \
-        if (result != kDNSServiceErr_NoError) {                                                                                    \
+        if ((result) != kDNSServiceErr_NoError) {                                                                                  \
             throw rav::Exception(std::string(msg) + ": " + dns_service_error_to_string(result), __FILE__, __LINE__, RAV_FUNCTION); \
         }
 
-    #define DNSSD_LOG_IF_ERROR(error)                                             \
-        if (error != kDNSServiceErr_NoError) {                                    \
+    #define DNSSD_LOG_IF_ERROR(error)                                                 \
+        if ((error) != kDNSServiceErr_NoError) {                                      \
             RAV_LOG_ERROR("DNSServiceError: {}", dns_service_error_to_string(error)); \
         }
 

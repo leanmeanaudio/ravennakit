@@ -60,7 +60,6 @@ class Browser {
      * Starts browsing for a service.
      * This function is not thread safe.
      * @param reg_type The service type (i.e. _http._tcp.).
-     * @return Returns a result indicating success or failure.
      */
     virtual void browse_for(const std::string& reg_type) = 0;
 
